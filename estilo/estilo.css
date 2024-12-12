@@ -1,0 +1,4920 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+}
+
+html{
+	height: 100%;
+}
+
+body{
+
+	min-height: 100%;
+	background-color: #fffff;
+	 
+}
+
+main {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+}
+
+.container{
+  display: grid;
+	grid-template: 
+	"header"   100px
+	"main"	   auto
+	"footer"   50px
+	;
+}
+
+
+/* X-Large  (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+.container{
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 0fr 0fr 0fr 0fr 0fr 0fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "slider slider slider"
+    "h1 h1 h1"
+    "nuestros_destacados nuestros_destacados nuestros_destacados"
+    "footer footer footer";
+}
+
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	background-color: #red;
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.slider {
+ grid-area: slider;
+}
+
+.splide img{
+width: 100%;
+	}
+
+
+.main_mini{
+	display: grid;
+	height: 500px;
+   grid-area: main;
+  grid-template-areas:
+    "arenita_2 titulo_main";
+}
+
+h1{
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 40px;
+	padding-left: 620px;
+	text-align: center;
+
+}
+
+.raya{
+	text-decoration: underline;
+    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-decoration-color: #ffa914; /* Color del subrayado */
+    text-underline-offset: 6px; /* Separación entre el texto y el subrayado */
+
+}
+
+.nuestros_destacados {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "destacado_1 destacado_2 destacado_3";
+  grid-area: nuestros_destacados;
+  margin-left: 6.5%;
+}
+
+.imagen{
+	width: 260px;
+	height: 254px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+.destacado_1 {
+ grid-area: destacado_1; 
+ width: 300px;
+ height: 350px;
+ background-color: #ffffff;
+ margin-top: 40px;
+ transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_1:hover{
+	transform: scale(1.1);
+}
+
+.destacado_2 {
+ grid-area: destacado_2; 
+ width: 300px;
+height: 350px;
+background-color: #ffffff;
+	margin-top: 40px;
+	transition: all 0.3s ease-in;
+	 box-shadow: 1px 1px 12px gray;
+}
+.destacado_2:hover{
+	transform: scale(1.1);
+}
+
+.destacado_3 {
+grid-area: destacado_3; 
+width: 300px;
+height: 350px;
+background-color: #ffffff;
+margin-top: 40px;
+transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_3:hover{
+	transform: scale(1.1);
+}
+
+.precio{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	padding-top: 15px;
+	text-align: center;
+
+}
+
+.descripcion{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+}
+
+.descripcion_robot{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #000000;
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+
+/* -----ROBÓTICA-----*//*------XLARGE---------*/
+
+.contendor_robotica{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_robotica titulo_robotica"
+	"main_robotica main_robotica"
+	"footer_robotica footer_robotica";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_robotica{
+	grid-area: titulo_robotica;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 40px;
+	background-color: #ffffff;
+
+}
+
+
+.main_robotica {
+  grid-area: main_robotica;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/robot_4.png) right 20px top no-repeat,
+	 url(../img/robot_2.png) right 300px no-repeat,
+	 url(../img/robot_3.png) left bottom no-repeat,
+	 url(../img/robot_1.png) left 100px no-repeat;
+
+}
+
+.robot_1,
+.robot_2,
+.robot_3,
+.robot_4,
+.robot_5,
+.robot_6,
+.robot_7,
+.robot_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.imagen_robot{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_robot_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.precio_robot{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_2{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_3{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+}
+
+.footer_robotica{
+	grid-area: footer_robotica;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----EXPERIMENTOS-----*//*------XLARGE---------*/
+
+.contendor_experimentos{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_experimentos titulo_experimentos"
+	"main_experimentos main_experimentos"
+	"footer_experimentos footer_experimentos";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_experimentos{
+	grid-area: titulo_experimentos;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	padding-top: 45px;
+	background-color: #ffffff;
+	text-align: center;
+
+}
+
+
+.main_experimentos {
+  grid-area: main_experimentos;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/experimento_1.png) right top no-repeat,
+	 url(../img/experimento_3.png) right 300px no-repeat,
+	 url(../img/experimento_4.png) left bottom no-repeat,
+	 url(../img/experimento_2.png) left 100px no-repeat;
+
+}
+
+.exp_1,
+.exp_2,
+.exp_3,
+.exp_4,
+.exp_5,
+.exp_6,
+.exp_7,
+.exp_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.exp_4_2{
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px;
+  padding-left: 10px;
+
+}
+
+.imagen_exp{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_exp_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.precio_exp{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_4{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_5{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 14px;
+}
+
+.footer_experimentos{
+	grid-area: footer_experimentos;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+
+
+/* -----CONTACTO-----*//*------XLARGE---------*/
+
+.contendor_contacto{
+	display: grid;
+	grid-template-columns: 650px auto;
+	grid-template-rows: 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"informacion formulario"
+	"footer_contacto footer_contacto";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.informacion{
+  background-color: red;
+}
+
+
+.informacion_2{
+	display: grid;
+  grid-template-columns: 400px;
+	grid-template-rows: 100px 40px 30px 40px 30px 200px;
+	grid-template-areas:
+	"titulo_contacto"
+	"titulo_direccion"
+	"texto_direccion"
+	"titulo_telefono"
+	"texto_telefono"
+	"mapa";
+	margin-top: 130px;
+	margin-left: 150px;
+
+}
+
+.titulo_contacto{
+	grid-area: titulo_contacto;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+padding-left: 10%;
+
+}
+
+
+
+.titulo_direccion{
+	grid-area: titulo_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	margin-left: 10%;
+	margin-top: 10px;
+
+}
+
+.texto_direccion{
+	grid-area: texto_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-left: 10%;
+		margin-top: 10px;
+}
+
+.titulo_telefono{
+	grid-area: titulo_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	margin-left: 10%;
+	margin-top: 10px;
+
+}
+
+.texto_telefono{
+	grid-area: texto_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-left: 10%;
+		margin-top: 10px;
+}
+
+.mapa{
+	grid-area: mapa;
+	padding-left: 10%;
+	padding-top: 20px;
+	width: 400px;
+}
+
+
+.formulario{
+	display: grid;
+	grid-area: formulario;
+background: url(../img/fondo_formulario_vertical.jpg) no-repeat ;
+}
+
+.formulario_arenita{
+	width: 60%;
+	height: 480px;
+	background-color: #f2f2f2;
+	border-radius: 30px;
+	float: right;
+	padding-left: 6%;
+	padding-top: 7px;
+	text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	margin-left: 130px;
+	margin-top: 100px;
+}
+
+.titulo_formulario{
+	font-family: 'DM sans', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	min-height: 100%;
+	margin-top: 7%;
+	margin-left: 5%;
+	color: #000000;
+
+}
+
+.texto_formulario{
+	font-family: 'DM sans', sans-serif;
+  font-weight: 300;
+	font-size: 16px;
+	margin-left: 5%;
+	margin-top: 4%;
+	color: #000000;
+
+}
+
+.caja {
+	width: 300px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	margin-bottom: 10px;
+} 
+
+.caja_2 {
+	width: 300px;
+	height: 150px;
+	margin-top: 35px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+
+
+.boton{
+	width: 35%;
+	height: 40px;
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 10px;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+.boton:hover {
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	background-color: #81cf01;
+	border-color: #81cf01;
+	color: #000000;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+}
+
+
+
+
+.footer_contacto{
+	grid-area: footer_contacto;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+.arenita_contacto_contacto{
+
+	height: 250px;
+  width: 90%;
+margin-top: 20px;
+padding-left: 20px;
+display: none;
+
+}
+
+}
+
+/* Large  (large desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.container{
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 0fr 0fr 0fr 0fr 0fr 0fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "slider slider slider"
+    "h1 h1 h1"
+    "nuestros_destacados nuestros_destacados nuestros_destacados"
+    "footer footer footer";
+}
+
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	background-color: #red;
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.slider {
+ grid-area: slider;
+}
+
+.splide img{
+width: 100%;
+	}
+
+
+.main_mini{
+	display: grid;
+	height: 500px;
+   grid-area: main;
+  grid-template-areas:
+    "arenita_2 titulo_main";
+}
+
+h1{
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 40px;
+	padding-left: 580px;
+	text-align: center;
+
+}
+
+.raya{
+	text-decoration: underline;
+    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-decoration-color: #ffa914; /* Color del subrayado */
+    text-underline-offset: 6px; /* Separación entre el texto y el subrayado */
+
+}
+
+.nuestros_destacados {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "destacado_1 destacado_2 destacado_3";
+  grid-area: nuestros_destacados;
+  margin-left: 6.5%;
+}
+
+.imagen{
+	width: 260px;
+	height: 254px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+.destacado_1 {
+ grid-area: destacado_1; 
+ width: 300px;
+ height: 350px;
+ background-color: #ffffff;
+ margin-top: 40px;
+ transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_1:hover{
+	transform: scale(1.1);
+}
+
+.destacado_2 {
+ grid-area: destacado_2; 
+ width: 300px;
+height: 350px;
+background-color: #ffffff;
+	margin-top: 40px;
+	transition: all 0.3s ease-in;
+	 box-shadow: 1px 1px 12px gray;
+}
+.destacado_2:hover{
+	transform: scale(1.1);
+}
+
+.destacado_3 {
+grid-area: destacado_3; 
+width: 300px;
+height: 350px;
+background-color: #ffffff;
+margin-top: 40px;
+transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_3:hover{
+	transform: scale(1.1);
+}
+
+.precio{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	padding-top: 15px;
+	text-align: center;
+
+}
+
+.descripcion{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+}
+
+.descripcion_robot{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #000000;
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+
+/* -----ROBÓTICA-----*//*------LARGE---------*/
+
+.contendor_robotica{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_robotica titulo_robotica"
+	"main_robotica main_robotica"
+	"footer_robotica footer_robotica";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_robotica{
+	grid-area: titulo_robotica;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 40px;
+	background-color: #ffffff;
+
+}
+
+
+.main_robotica {
+  grid-area: main_robotica;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/robot_4.png) right 20px top no-repeat,
+	 url(../img/robot_2.png) right 300px no-repeat,
+	 url(../img/robot_3.png) left bottom no-repeat,
+	 url(../img/robot_1.png) left 100px no-repeat;
+
+}
+
+.robot_1,
+.robot_2,
+.robot_3,
+.robot_4,
+.robot_5,
+.robot_6,
+.robot_7,
+.robot_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.imagen_robot{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_robot_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.precio_robot{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_2{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_3{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+}
+
+.footer_robotica{
+	grid-area: footer_robotica;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----EXPERIMENTOS-----*//*------LARGE---------*/
+
+.contendor_experimentos{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_experimentos titulo_experimentos"
+	"main_experimentos main_experimentos"
+	"footer_experimentos footer_experimentos";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_experimentos{
+	grid-area: titulo_experimentos;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	padding-top: 45px;
+	background-color: #ffffff;
+	text-align: center;
+
+}
+
+
+.main_experimentos {
+  grid-area: main_experimentos;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/experimento_1.png) right top no-repeat,
+	 url(../img/experimento_3.png) right 300px no-repeat,
+	 url(../img/experimento_4.png) left bottom no-repeat,
+	 url(../img/experimento_2.png) left 100px no-repeat;
+
+}
+
+.exp_1,
+.exp_2,
+.exp_3,
+.exp_4,
+.exp_5,
+.exp_6,
+.exp_7,
+.exp_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.exp_4_2{
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px;
+  padding-left: 10px;
+
+}
+
+.imagen_exp{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_exp_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.precio_exp{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_4{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_5{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 14px;
+}
+
+.footer_experimentos{
+	grid-area: footer_experimentos;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----CONTACTO-----*//*------LARGE---------*/
+
+.contendor_contacto{
+	display: grid;
+	grid-template-columns: 650px auto;
+	grid-template-rows: 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"informacion formulario"
+	"footer_contacto footer_contacto";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.informacion{
+  background-color: red;
+}
+
+
+.informacion_2{
+	display: grid;
+  grid-template-columns: 400px;
+	grid-template-rows: 100px 40px 30px 40px 30px 200px;
+	grid-template-areas:
+	"titulo_contacto"
+	"titulo_direccion"
+	"texto_direccion"
+	"titulo_telefono"
+	"texto_telefono"
+	"mapa";
+	margin-top: 100px;
+	margin-left: 70px;
+
+}
+
+.titulo_contacto{
+	grid-area: titulo_contacto;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+padding-left: 10%;
+
+}
+
+
+
+.titulo_direccion{
+	grid-area: titulo_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	margin-left: 10%;
+	margin-top: 10px;
+
+}
+
+.texto_direccion{
+	grid-area: texto_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-left: 10%;
+		margin-top: 10px;
+}
+
+.titulo_telefono{
+	grid-area: titulo_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	margin-left: 10%;
+	margin-top: 10px;
+
+}
+
+.texto_telefono{
+	grid-area: texto_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-left: 10%;
+		margin-top: 10px;
+}
+
+.mapa{
+	grid-area: mapa;
+	padding-left: 10%;
+	padding-top: 20px;
+	width: 400px;
+}
+
+
+.formulario{
+	display: grid;
+	grid-area: formulario;
+background: url(../img/fondo_formulario_vertical.jpg) no-repeat ;
+}
+
+.formulario_arenita{
+	width: 70%;
+	height: 480px;
+	background-color: #f2f2f2;
+	border-radius: 30px;
+	float: right;
+	padding-left: 5%;
+	padding-top: 7px;
+	text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	margin-left: 100px;
+	margin-top: 100px;
+}
+
+.titulo_formulario{
+	font-family: 'DM sans', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	min-height: 100%;
+	margin-top: 7%;
+	margin-left: 5%;
+	color: #000000;
+
+}
+
+.texto_formulario{
+	font-family: 'DM sans', sans-serif;
+  font-weight: 300;
+	font-size: 16px;
+	margin-left: 5%;
+	margin-top: 4%;
+	color: #000000;
+
+}
+
+.caja {
+	width: 300px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	margin-bottom: 10px;
+} 
+
+.caja_2 {
+	width: 300px;
+	height: 150px;
+	margin-top: 35px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+
+
+.boton{
+	width: 35%;
+	height: 40px;
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 10px;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+.boton:hover {
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	background-color: #81cf01;
+	border-color: #81cf01;
+	color: #000000;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+}
+
+
+
+
+.footer_contacto{
+	grid-area: footer_contacto;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+.arenita_contacto_contacto{
+
+	height: 250px;
+  width: 90%;
+margin-top: 20px;
+padding-left: 20px;
+display: none;
+
+}
+
+
+
+}
+
+/* Medium (min-width: 768px) and (max-width: 991px)*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+	.container{
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 0fr 0fr 0fr 0fr 0fr 0fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "slider slider slider"
+    "h1 h1 h1"
+    "nuestros_destacados nuestros_destacados nuestros_destacados"
+    "footer footer footer";
+}
+
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	background-color: #red;
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left: 6%;
+	margin-right: 5%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.slider {
+ grid-area: slider;
+}
+
+.splide img{
+width: 100%;
+	}
+
+
+.main_mini{
+	display: grid;
+	height: 500px;
+   grid-area: main;
+  grid-template-areas:
+    "arenita_2 titulo_main";
+}
+
+h1{
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 40px;
+	padding-left: 470px;
+	text-align: center;
+
+}
+
+.raya{
+	text-decoration: underline;
+    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-decoration-color: #ffa914; /* Color del subrayado */
+    text-underline-offset: 6px; /* Separación entre el texto y el subrayado */
+
+}
+
+.nuestros_destacados {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "destacado_1 destacado_2 destacado_3";
+  grid-area: nuestros_destacados;
+  margin-left: 3.5%;
+}
+
+.imagen{
+	width: 260px;
+	height: 254px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+.destacado_1 {
+ grid-area: destacado_1; 
+ width: 300px;
+ height: 350px;
+ background-color: #ffffff;
+ margin-top: 40px;
+ transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_1:hover{
+	transform: scale(1.1);
+}
+
+.destacado_2 {
+ grid-area: destacado_2; 
+ width: 300px;
+height: 350px;
+background-color: #ffffff;
+	margin-top: 40px;
+	transition: all 0.3s ease-in;
+	 box-shadow: 1px 1px 12px gray;
+}
+.destacado_2:hover{
+	transform: scale(1.1);
+}
+
+.destacado_3 {
+grid-area: destacado_3; 
+width: 300px;
+height: 350px;
+background-color: #ffffff;
+margin-top: 40px;
+transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_3:hover{
+	transform: scale(1.1);
+}
+
+.precio{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	padding-top: 15px;
+	text-align: center;
+
+}
+
+.descripcion{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+}
+
+.descripcion_robot{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #000000;
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 420px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----ROBÓTICA-----*//*------MEDIUM---------*/
+
+.contendor_robotica{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 1100px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_robotica titulo_robotica"
+	"main_robotica main_robotica"
+	"footer_robotica footer_robotica";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	background-color: #red;
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left: 6%;
+	margin-right: 5%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_robotica{
+	grid-area: titulo_robotica;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 40px;
+	background-color: #ffffff;
+
+}
+
+
+.main_robotica {
+  grid-area: main_robotica;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/robot_2.png) right 300px no-repeat,
+	 url(../img/robot_3.png) left bottom no-repeat,
+	 url(../img/robot_1.png) left 100px no-repeat;
+
+}
+
+.robot_1,
+.robot_2,
+.robot_3,
+.robot_4,
+.robot_5,
+.robot_6,
+.robot_7,
+.robot_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px;
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.imagen_arenita_arenita{
+	width: 300px;
+	height: 362px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+
+
+.imagen_robot{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_robot_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.precio_robot{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_2{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_3{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+}
+
+.footer_robotica{
+	grid-area: footer_robotica;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 430px;
+	margin-right: 10%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----EXPERIMENTOS-----*//*------MEDIUM---------*/
+
+.contendor_experimentos{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 1100px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_experimentos titulo_experimentos"
+	"main_experimentos main_experimentos"
+	"footer_experimentos footer_experimentos";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	background-color: #red;
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left: 6%;
+	margin-right: 5%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_experimentos{
+	grid-area: titulo_experimentos;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	padding-top: 45px;
+	padding-left: 50px;
+	background-color: #ffffff;
+	text-align: center;
+
+}
+
+
+.main_experimentos {
+  grid-area: main_experimentos;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(3, 300px);
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/experimento_3.png) right 300px no-repeat,
+	 url(../img/experimento_4.png) left bottom no-repeat,
+	 url(../img/experimento_2.png) left 100px no-repeat;
+
+}
+
+.exp_1,
+.exp_2,
+.exp_3,
+.exp_4,
+.exp_5,
+.exp_6,
+.exp_7,
+.exp_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.exp_4_2{
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px;
+  padding-left: 10px;
+
+}
+
+.imagen_exp{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_exp_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.imagen_arenita_arenita{
+	width: 300px;
+	height: 362px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.precio_exp{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_4{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_5{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 14px;
+}
+
+.footer_experimentos{
+	grid-area: footer_experimentos;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 410px;
+	margin-right: 10%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----CONTACTO-----*//*------MEDIUM---------*/
+
+.contendor_contacto{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100px 300px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"informacion_2 imagen"
+	"formulario formulario"
+	"footer_contacto footer_contacto";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left: 6%;
+	margin-right: 5%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.informacion_2{
+	display: grid;
+  grid-template-columns: 1 fr;
+  grid-template-rows: 1fr;
+  grid-auto-flow: row;
+  grid-area: informacion_2;
+  grid-template-areas:
+    "titulo_contacto";
+  height: 300px;
+  width: 100%;
+
+}
+
+
+.titulo_contacto{
+	grid-area: titulo_contacto;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+	padding-top: 100px;
+	margin-right: 2%;
+	text-align: center;
+}
+
+.arenita_contacto_contacto{
+
+	height: 270px;
+  width: 90%;
+margin-top: 15px;
+padding-left: 20px;
+
+}
+
+
+
+.titulo_direccion{
+	grid-area: titulo_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	display: none;
+
+}
+
+.texto_direccion{
+	grid-area: texto_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+	display: none;
+}
+
+.titulo_telefono{
+	grid-area: titulo_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	display: none;
+
+}
+
+.texto_telefono{
+	grid-area: texto_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-top: 10px;
+		display: none;
+}
+
+.mapa{
+	grid-area: mapa;
+	padding-left: 10%;
+	padding-top: 10px;
+	width: 400px;
+	display: none;
+}
+
+
+.formulario{
+	display: grid;
+	grid-area: formulario;
+background: url(../img/fondo_formulario.jpg) no-repeat ;
+}
+
+.formulario_arenita{
+	width: 65%;
+	height: 500px;
+	background-color: #f2f2f2;
+	border-radius: 30px;
+	float: right;
+	padding-left: 1%;
+	padding-top: 1%;
+	text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	margin-left: 190px;
+	margin-top: 100px;
+}
+
+.titulo_formulario{
+	font-family: 'DM sans', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	min-height: 100%;
+	margin-top: 4%;
+	margin-left: 5%;
+	color: #000000;
+
+}
+
+.texto_formulario{
+	font-family: 'DM sans', sans-serif;
+  font-weight: 300;
+	font-size: 16px;
+	margin-left: 5%;
+	margin-top: 4%;
+	color: #000000;
+
+}
+
+
+
+.caja {
+	width: 550px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	margin-bottom: 10px;
+} 
+
+.caja_2 {
+	width: 550px;
+	height: 150px;
+	margin-top: 35px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+
+
+.boton{
+	width: 35%;
+	height: 40px;
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 10px;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+.boton:hover {
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	background-color: #81cf01;
+	border-color: #81cf01;
+	color: #000000;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+}
+
+
+
+
+.footer_contacto{
+	grid-area: footer_contacto;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 400px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+}
+
+/* Small (min-width: 576px) and (max-width: 767px)*/
+@media (min-width: 576px) and (max-width: 767px) {
+
+	.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr 0fr 0fr 0fr 0fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "slider"
+    "h1"
+    "nuestros_destacados"
+    "footer";
+}
+
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 70px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav"
+    "nav";
+  grid-area: header;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo nav; 
+  margin-left: 250px;
+  margin-top: 13px;
+  width: 50%;
+  height: 75px;
+}
+
+.nav { 
+  grid-area: logo nav; 
+  width: 100%;
+  height: auto;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav li {
+	margin-left: 120px;
+	margin-top: 25px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	padding: 1%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.slider {
+ grid-area: slider;
+}
+
+.splide img{
+width: 100%;
+	}
+
+
+
+h1{
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 40px;
+	padding-left: 50px;
+	text-align: center;
+
+}
+
+.raya{
+	text-decoration: underline;
+    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-decoration-color: #ffa914; /* Color del subrayado */
+    text-underline-offset: 6px; /* Separación entre el texto y el subrayado */
+
+}
+
+.nuestros_destacados {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "destacado_1"
+    "destacado_2"
+    "destacado_3";
+	grid-area: nuestros_destacados;
+	margin-left: 11%;
+}
+
+.imagen{
+	width: 310px;
+	height: 301px;
+	margin-top: 10px;
+	margin-left: 20px;
+	float: left;
+}
+
+
+.destacado_1 {
+ grid-area: destacado_1; 
+ width: 600px;
+ height: 350px;
+ background-color: #ffffff;
+ margin-top: 40px;
+ transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_1:hover{
+	transform: scale(1.1);
+}
+
+.destacado_2 {
+ grid-area: destacado_2; 
+ width: 600px;
+height: 350px;
+background-color: #ffffff;
+	margin-top: 40px;
+	transition: all 0.3s ease-in;
+	 box-shadow: 1px 1px 12px gray;
+}
+.destacado_2:hover{
+	transform: scale(1.1);
+}
+
+.destacado_3 {
+grid-area: destacado_3; 
+ width: 600px;
+height: 350px;
+background-color: #ffffff;
+margin-top: 40px;
+transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_3:hover{
+	transform: scale(1.1);
+}
+
+.precio{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	padding-top: 150px;
+	text-align: center;
+	padding-right: 10%;
+	float: right;
+
+}
+
+.descripcion{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 12px;
+		padding-right: 4%;
+		float: right;
+		text-align: center;
+}
+
+.descripcion_robot{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-right: 11%;
+		font-weight: 300;
+		font-size: 12px;
+		float: right;
+		text-align: center;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #000000;
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 280px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----ROBÓTICA-----*//*------SMALL---------*/
+
+.contendor_robotica{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 150px 100px 1400px 60px;
+	grid-template-areas:
+	"header"
+	"titulo_robotica"
+	"main_robotica"
+	"footer_robotica";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 70px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav"
+    "nav";
+  grid-area: header;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo nav; 
+  margin-left: 250px;
+  margin-top: 13px;
+  width: 50%;
+  height: 75px;
+}
+
+.nav { 
+  grid-area: logo nav; 
+  width: 100%;
+  height: auto;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav li {
+	margin-left: 120px;
+	margin-top: 25px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	padding: 1%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_robotica{
+	grid-area: titulo_robotica;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 40px;
+	background-color: #ffffff;
+
+}
+
+
+.main_robotica {
+  grid-area: main_robotica;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(4, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/robot_4.png) right bottom no-repeat,
+	 url(../img/robot_2.png) right 300px no-repeat,
+	 url(../img/robot_6.png) right 900px no-repeat,
+	 url(../img/robot_3.png) left bottom no-repeat,
+	 url(../img/robot_5.png) left 700px no-repeat,
+	 url(../img/robot_1.png) left 100px no-repeat;
+
+}
+
+.robot_1,
+.robot_2,
+.robot_3,
+.robot_4,
+.robot_5,
+.robot_6,
+.robot_7,
+.robot_8 {
+	display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+
+.imagen_robot{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_robot_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.imagen_arenita_arenita{
+	width: 300px;
+	height: 362px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+
+.precio_robot{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_2{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_3{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+}
+
+.footer_robotica{
+	grid-area: footer_robotica;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 300px;
+	margin-right: 10%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----EXPERIMENTOS-----*//*------SMALL---------*/
+
+.contendor_experimentos{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 150px 100px 1400px 60px;
+	grid-template-areas:
+	"header"
+	"titulo_experimentos"
+	"main_experimentos"
+	"footer_experimentos";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 70px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav"
+    "nav";
+  grid-area: header;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo nav; 
+  margin-left: 250px;
+  margin-top: 13px;
+  width: 50%;
+  height: 75px;
+}
+
+.nav { 
+  grid-area: logo nav; 
+  width: 100%;
+  height: auto;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav li {
+	margin-left: 120px;
+	margin-top: 25px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	padding: 1%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_experimentos{
+	grid-area: titulo_experimentos;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	padding-top: 45px;
+	background-color: #ffffff;
+	text-align: center;
+
+}
+
+
+.main_experimentos {
+  grid-area: main_experimentos;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  grid-template-rows: repeat(4, 300px);
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/experimento_1.png) right bottom no-repeat,
+	 url(../img/experimento_3.png) right 300px no-repeat,
+	 url(../img/experimento_5.png) right 800px no-repeat,
+	 url(../img/experimento_6.png) left 650px no-repeat,
+	 url(../img/experimento_4.png) left bottom no-repeat,
+	 url(../img/experimento_2.png) left 100px no-repeat;
+
+}
+
+.exp_1,
+.exp_2,
+.exp_3,
+.exp_4,
+.exp_5,
+.exp_6,
+.exp_7,
+.exp_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.imagen_arenita_arenita{
+	width: 300px;
+	height: 362px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+
+.exp_4_2{
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px;
+  padding-left: 10px;
+
+}
+
+.imagen_exp{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_exp_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.precio_exp{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_4{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_5{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 14px;
+}
+
+.footer_experimentos{
+	grid-area: footer_experimentos;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 280px;
+	margin-right: 10%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----CONTACTO-----*//*------SMALL---------*/
+
+.contendor_contacto{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 150px 200px 700px 60px;
+	grid-template-areas:
+	"header"
+	"titulo_contacto"
+	"formulario"
+	"footer_contacto";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 70px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav"
+    "nav";
+  grid-area: header;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo nav; 
+  margin-left: 250px;
+  margin-top: 13px;
+  width: 50%;
+  height: 75px;
+}
+
+.nav { 
+  grid-area: logo nav; 
+  width: 100%;
+  height: auto;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav li {
+	margin-left: 120px;
+	margin-top: 25px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	padding: 1%;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.titulo_contacto{
+	grid-area: titulo_contacto;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+	padding-left: 4%;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.arenita_contacto_contacto{
+
+	height: 250px;
+  width: 90%;
+margin-top: 20px;
+padding-left: 20px;
+display: none;
+
+}
+
+
+
+.titulo_direccion{
+	grid-area: titulo_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	display: none;
+
+}
+
+.texto_direccion{
+	grid-area: texto_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+	display: none;
+}
+
+.titulo_telefono{
+	grid-area: titulo_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	display: none;
+
+}
+
+.texto_telefono{
+	grid-area: texto_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-top: 10px;
+		display: none;
+}
+
+.mapa{
+	grid-area: mapa;
+	padding-left: 10%;
+	padding-top: 10px;
+	width: 400px;
+	display: none;
+}
+
+
+.formulario{
+	display: grid;
+	grid-area: formulario;
+background: url(../img/fondo_formulario.jpg) no-repeat ;
+}
+
+.formulario_arenita{
+	width: 65%;
+	height: 500px;
+	background-color: #f2f2f2;
+	border-radius: 30px;
+	float: right;
+	padding-left: 1%;
+	padding-top: 1%;
+	text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	margin-left: 135px;
+	margin-top: 100px;
+}
+
+.titulo_formulario{
+	font-family: 'DM sans', sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	min-height: 100%;
+	margin-top: 5%;
+	margin-left: 5%;
+	color: #000000;
+
+}
+
+
+
+.texto_formulario{
+	font-family: 'DM sans', sans-serif;
+  font-weight: 300;
+	font-size: 16px;
+	margin-left: 5%;
+	margin-top: 4%;
+	color: #000000;
+
+}
+
+.caja {
+	width: 440px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	margin-bottom: 10px;
+} 
+
+.caja_2 {
+	width: 440px;
+	height: 150px;
+	margin-top: 35px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+
+
+.boton{
+	width: 35%;
+	height: 40px;
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 10px;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+.boton:hover {
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	background-color: #81cf01;
+	border-color: #81cf01;
+	color: #000000;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+}
+
+
+
+
+.footer_contacto{
+	grid-area: footer_contacto;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 270px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+}
+
+
+/* X-Large  (large desktops, 1400px and up)*/
+@media (min-width: 1400px) and (max-width: 1600px){
+
+.container{
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 0fr 0fr 0fr 0fr 0fr 0fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "slider slider slider"
+    "h1 h1 h1"
+    "nuestros_destacados nuestros_destacados nuestros_destacados"
+    "footer footer footer";
+}
+
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	background-color: #red;
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.slider {
+ grid-area: slider;
+}
+
+.splide img{
+width: 100%;
+	}
+
+
+.main_mini{
+	display: grid;
+	height: 500px;
+   grid-area: main;
+  grid-template-areas:
+    "arenita_2 titulo_main";
+}
+
+h1{
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 40px;
+	padding-left: 670px;
+	text-align: center;
+
+}
+
+.raya{
+	text-decoration: underline;
+    text-decoration-thickness: 2px; /* Grosor del subrayado */
+    text-decoration-color: #ffa914; /* Color del subrayado */
+    text-underline-offset: 6px; /* Separación entre el texto y el subrayado */
+
+}
+
+.nuestros_destacados {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "destacado_1 destacado_2 destacado_3";
+  grid-area: nuestros_destacados;
+  margin-left: 6.5%;
+}
+
+.imagen{
+	width: 260px;
+	height: 254px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+.destacado_1 {
+ grid-area: destacado_1; 
+ width: 300px;
+ height: 350px;
+ background-color: #ffffff;
+ margin-top: 40px;
+ transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_1:hover{
+	transform: scale(1.1);
+}
+
+.destacado_2 {
+ grid-area: destacado_2; 
+ width: 300px;
+height: 350px;
+background-color: #ffffff;
+	margin-top: 40px;
+	transition: all 0.3s ease-in;
+	 box-shadow: 1px 1px 12px gray;
+}
+.destacado_2:hover{
+	transform: scale(1.1);
+}
+
+.destacado_3 {
+grid-area: destacado_3; 
+width: 300px;
+height: 350px;
+background-color: #ffffff;
+margin-top: 40px;
+transition: all 0.3s ease-in;
+ box-shadow: 1px 1px 12px gray;
+}
+
+.destacado_3:hover{
+	transform: scale(1.1);
+}
+
+.precio{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	padding-top: 15px;
+	text-align: center;
+
+}
+
+.descripcion{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+}
+
+.descripcion_robot{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: #000000;
+	width: 100%;
+	height: 60px;
+	margin-top: 20px;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+
+/* -----ROBÓTICA-----*//*------XLARGE---------*/
+
+.contendor_robotica{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_robotica titulo_robotica"
+	"main_robotica main_robotica"
+	"footer_robotica footer_robotica";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_robotica{
+	grid-area: titulo_robotica;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 40px;
+	background-color: #ffffff;
+
+}
+
+
+.main_robotica {
+  grid-area: main_robotica;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/robot_4.png) right 20px top no-repeat,
+	 url(../img/robot_2.png) right 300px no-repeat,
+	 url(../img/robot_3.png) left bottom no-repeat,
+	 url(../img/robot_1.png) left 100px no-repeat;
+
+}
+
+.robot_1,
+.robot_2,
+.robot_3,
+.robot_4,
+.robot_5,
+.robot_6,
+.robot_7,
+.robot_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.imagen_robot{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_robot_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.precio_robot{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_2{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_3{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+}
+
+.footer_robotica{
+	grid-area: footer_robotica;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+/* -----EXPERIMENTOS-----*//*------XLARGE---------*/
+
+.contendor_experimentos{
+	display: grid;
+	grid-template-columns: 300px auto;
+	grid-template-rows: 100px 100px 700px 60px;
+	grid-template-areas:
+	"header header"
+	"titulo_experimentos titulo_experimentos"
+	"main_experimentos main_experimentos"
+	"footer_experimentos footer_experimentos";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+.titulo_experimentos{
+	grid-area: titulo_experimentos;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	padding-top: 45px;
+	background-color: #ffffff;
+	text-align: center;
+
+}
+
+
+.main_experimentos {
+  grid-area: main_experimentos;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background:
+	 url(../img/experimento_1.png) right top no-repeat,
+	 url(../img/experimento_3.png) right 300px no-repeat,
+	 url(../img/experimento_4.png) left bottom no-repeat,
+	 url(../img/experimento_2.png) left 100px no-repeat;
+
+}
+
+.exp_1,
+.exp_2,
+.exp_3,
+.exp_4,
+.exp_5,
+.exp_6,
+.exp_7,
+.exp_8 {
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px
+}
+
+.exp_4_2{
+	 display: grid;
+  background-color: #f2f2f2;
+  width: 250px;
+  height: 300px;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+  gap: 5px;
+  padding-left: 10px;
+
+}
+
+.imagen_exp{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+
+}
+
+.imagen_exp_2{
+	width: 200px;
+	height: 194px;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+.robot_9 {
+  display: grid;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  display: none;
+}
+
+.precio_exp{
+	color: #000000;
+	font-family: "DM sans", sans-serif;
+	font-size: 25px;
+	font-weight: 500;
+	text-align: center;
+margin-top: -60px;
+
+}
+
+.descripcion_4{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 20px;
+}
+
+.descripcion_5{
+		color: #000000;
+		font-family: "DM sans", sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		text-align: center;
+		margin-top: -45px;
+		line-height: 14px;
+}
+
+.footer_experimentos{
+	grid-area: footer_experimentos;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 550px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+
+
+/* -----CONTACTO-----*//*------XLARGE---------*/
+
+.contendor_contacto{
+	display: grid;
+	grid-template-columns: 650px auto;
+	grid-template-rows: 100px 800px 60px;
+	grid-template-areas:
+	"header header"
+	"informacion formulario"
+	"footer_contacto footer_contacto";
+}
+
+.header{
+	 display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo nav";
+  grid-area: header;
+  height: 100px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.logo{
+	grid-area: logo; 
+	float: left;
+	margin-left: 50px;
+	margin-top: 13px;
+	width: 250px;
+	height: 75px;
+}
+
+.nav { 
+	grid-area: nav; 
+	width: 100%;
+	height:129px;
+}
+
+.nav li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.nav li a {
+	width: 20%;
+	height: 40px;
+	font-size: 16px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+	padding: 1%;
+	margin-left:2%;
+	margin-right: 8px;
+	margin-top: 35px;
+	color: #000000;
+	font-family: "DM Sans", sans-serif;
+	transition: ease-in .4s;
+
+}
+
+
+nav li a:hover {
+	transform: scale(1.1);
+}
+
+
+.informacion{
+  background-color: red;
+}
+
+
+.informacion_2{
+	display: grid;
+  grid-template-columns: 400px;
+	grid-template-rows: 100px 40px 30px 40px 30px 200px;
+	grid-template-areas:
+	"titulo_contacto"
+	"titulo_direccion"
+	"texto_direccion"
+	"titulo_telefono"
+	"texto_telefono"
+	"mapa";
+	margin-top: 130px;
+	margin-left: 150px;
+
+}
+
+.titulo_contacto{
+	grid-area: titulo_contacto;
+	color: #000000;
+	font-family: "Parkinsans", sans-serif;
+	font-size: 35px;
+	font-weight: 700;
+padding-left: 10%;
+
+}
+
+
+
+.titulo_direccion{
+	grid-area: titulo_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	margin-left: 10%;
+	margin-top: 10px;
+
+}
+
+.texto_direccion{
+	grid-area: texto_direccion;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-left: 10%;
+		margin-top: 10px;
+}
+
+.titulo_telefono{
+	grid-area: titulo_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
+	margin-left: 10%;
+	margin-top: 10px;
+
+}
+
+.texto_telefono{
+	grid-area: texto_telefono;
+	font-family: 'DM sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	color: #000000;
+		margin-left: 10%;
+		margin-top: 10px;
+}
+
+.mapa{
+	grid-area: mapa;
+	padding-left: 10%;
+	padding-top: 20px;
+	width: 400px;
+}
+
+
+.formulario{
+	display: grid;
+	grid-area: formulario;
+background: url(../img/fondo_formulario_vertical.jpg) no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.formulario_arenita{
+	width: 70%;
+	height: 550px;
+	background-color: #f2f2f2;
+	border-radius: 30px;
+	float: right;
+	padding-left: 6%;
+	padding-top: 7px;
+	text-align: left;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	margin-left: 130px;
+	margin-top: 100px;
+}
+
+.titulo_formulario{
+	font-family: 'DM sans', sans-serif;
+	font-size: 35px;
+	font-weight: 300;
+	min-height: 100%;
+	margin-top: 7%;
+	margin-left: 5%;
+	color: #000000;
+
+}
+
+.texto_formulario{
+	font-family: 'DM sans', sans-serif;
+  font-weight: 300;
+	font-size: 16px;
+	margin-left: 5%;
+	margin-top: 4%;
+	color: #000000;
+
+}
+
+.caja {
+	width: 480px;
+	height: 25px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	margin-bottom: 10px;
+} 
+
+.caja_2 {
+	width: 480px;
+	height: 150px;
+	margin-top: 35px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #000;
+	padding: 10px;
+}
+
+
+.boton{
+	width: 35%;
+	height: 40px;
+	background-color: #000000;
+	color: #ffffff;
+	border-radius: 10px;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+
+.boton:hover {
+	font-family: 'DM sans', sans-serif;
+	font-weight: 300;
+	background-color: #81cf01;
+	border-color: #81cf01;
+	color: #000000;
+	font-size: 16px;
+	font-family: 'DM sans', sans-serif;
+}
+
+
+
+
+.footer_contacto{
+	grid-area: footer_contacto;
+	background-color: #000000;
+}
+
+
+
+.uces{
+	width: 70px;
+	height: 40px;
+	float: left;
+	margin-left: 3%;
+	margin-top: 10px;
+	margin-right: 25%;
+}
+
+.minisitio{
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	margin-left: 700px;
+	margin-right: 31%;
+	margin-top: -30px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nick{
+	width: 150px;
+	height: 20px;
+	float: right;
+	clear: both;
+	margin-right: 3%;
+	margin-top: -30px;
+}
+
+.arenita_contacto_contacto{
+
+	height: 250px;
+  width: 90%;
+margin-top: 20px;
+padding-left: 20px;
+display: none;
+
+}
+}
